@@ -1,6 +1,8 @@
 sudo: true
 dist: trusty
 
+language: java
+
 jobs:
   include:
     - stage: build docker image
