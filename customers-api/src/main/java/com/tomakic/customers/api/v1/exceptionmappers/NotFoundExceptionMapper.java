@@ -1,7 +1,7 @@
-package com.kumuluz.ee.samples.tutorial.customers.api.v1.exceptionmappers;
+package com.tomakic.customers.api.v1.exceptionmappers;
 
 
-import com.kumuluz.ee.samples.tutorial.customers.api.v1.dtos.Error;
+import com.tomakic.customers.api.v1.dtos.Error;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.NotFoundException;

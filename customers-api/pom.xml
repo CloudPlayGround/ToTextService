@@ -35,11 +35,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.kumuluz.ee.samples.tutorial</groupId>
-            <artifactId>customers-business-logic</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-core</artifactId>
         </dependency>
@@ -57,6 +52,26 @@
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
             <version>3.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.logs</groupId>
+            <artifactId>kumuluzee-logs-common</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tomakic</groupId>
+            <artifactId>customers-business-logic</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
@@ -84,7 +99,7 @@
                         <apiSource>
                             <locations>
                                 <location>
-                                    com.kumuluz.ee.samples.tutorial.customers.api.v1.resources.CustomersResource
+                                    com.tomakic.customers.api.v1.resources.CustomersResource
                                 </location>
                             </locations>
                             <schemes>

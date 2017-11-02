@@ -1,4 +1,4 @@
-package com.kumuluz.ee.samples.tutorial.customers.api.v1.interceptors;
+package com.tomakic.customers.api.v1.interceptors;
 
 import com.kumuluz.ee.common.runtime.EeRuntime;
 import com.kumuluz.ee.configuration.utils.ConfigurationUtil;

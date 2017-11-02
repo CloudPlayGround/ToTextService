@@ -1,4 +1,4 @@
-package com.kumuluz.ee.samples.tutorial.customers.api.v1.dtos;
+package com.tomakic.customers.api.v1.dtos;
 
 public class Error {
 

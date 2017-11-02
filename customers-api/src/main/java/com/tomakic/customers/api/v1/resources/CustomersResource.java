@@ -1,8 +1,8 @@
-package com.kumuluz.ee.samples.tutorial.customers.api.v1.resources;
+package com.tomakic.customers.api.v1.resources;
 
 import com.kumuluz.ee.logs.cdi.Log;
-import com.kumuluz.ee.samples.tutorial.customers.Customer;
-import com.kumuluz.ee.samples.tutorial.customers.cdi.CustomersBean;
+import com.tomakic.customers.Customer;
+import com.tomakic.customers.cdi.CustomersBean;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.eclipse.microprofile.metrics.annotation.Metered;

@@ -1,4 +1,4 @@
-package com.kumuluz.ee.samples.tutorial.customers.cdi;
+package com.tomakic.customers.cdi;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kumuluz.ee.discovery.annotations.DiscoverService;
@@ -7,9 +7,8 @@ import com.kumuluz.ee.logs.LogManager;
 import com.kumuluz.ee.logs.Logger;
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
-import com.kumuluz.ee.samples.tutorial.customers.Customer;
-import com.kumuluz.ee.samples.tutorial.customers.cdi.configuration.RestProperties;
-import com.kumuluz.ee.samples.tutorial.orders.Order;
+import com.tomakic.customers.Customer;
+import com.tomakic.customers.cdi.configuration.RestProperties;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -88,7 +87,7 @@ public class CustomersBean {
         }
 
         if (restProperties.isOrderServiceEnabled()) {
-            List<Order> orders = customersBean.getOrders(customerId);
+            List<String> orders = customersBean.getOrders(customerId);
             customer.setOrders(orders);
         }
 
@@ -150,7 +149,7 @@ public class CustomersBean {
     @Fallback(fallbackMethod = "getOrdersFallback")
     @CommandKey("http-get-order")
     @Timeout(value = 500)
-    public List<Order> getOrders(String customerId) {
+    public List<String> getOrders(String customerId) {
 
         if (basePath.isPresent()) {
             try {
@@ -181,13 +180,13 @@ public class CustomersBean {
         return new ArrayList<>();
     }
 
-    public List<Order> getOrdersFallback(String customerId) {
+    public List<String> getOrdersFallback(String customerId) {
         return new ArrayList<>();
     }
 
-    private List<Order> getObjects(String json) throws IOException {
+    private List<String> getObjects(String json) throws IOException {
         return json == null ? new ArrayList<>() : objectMapper.readValue(json,
-                objectMapper.getTypeFactory().constructCollectionType(List.class, Order.class));
+                objectMapper.getTypeFactory().constructCollectionType(List.class, String.class));
     }
 
     private void beginTx() {

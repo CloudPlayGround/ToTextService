@@ -1,4 +1,4 @@
-package com.kumuluz.ee.samples.tutorial.customers.api.v1.producers;
+package com.tomakic.customers.api.v1.producers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

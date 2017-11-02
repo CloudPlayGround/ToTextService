@@ -1,6 +1,5 @@
-package com.kumuluz.ee.samples.tutorial.customers;
+package com.tomakic.customers;
 
-import com.kumuluz.ee.samples.tutorial.orders.Order;
 import org.eclipse.persistence.annotations.UuidGenerator;
 
 import javax.persistence.*;
@@ -31,7 +30,7 @@ public class Customer {
     private Date dateOfBirth;
 
     @Transient
-    private List<Order> orders;
+    private List<String> orders;
 
     public String getId() {
         return id;
@@ -73,11 +72,11 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public List<Order> getOrders() {
+    public List<String> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<Order> orders) {
+    public void setOrders(List<String> orders) {
         this.orders = orders;
     }
 }

@@ -1,4 +1,4 @@
-package com.kumuluz.ee.samples.tutorial.customers.cdi.configuration;
+package com.tomakic.customers.cdi.configuration;
 
 import com.kumuluz.ee.configuration.cdi.ConfigBundle;
 import com.kumuluz.ee.configuration.cdi.ConfigValue;

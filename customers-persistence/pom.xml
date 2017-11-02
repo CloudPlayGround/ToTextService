@@ -14,11 +14,6 @@
     <dependencies>
 
         <dependency>
-            <groupId>com.kumuluz.ee.samples.tutorial</groupId>
-            <artifactId>orders-persistence</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-jpa-eclipselink</artifactId>
         </dependency>

@@ -1,4 +1,4 @@
-package com.kumuluz.ee.samples.tutorial.customers.api.v1;
+package com.tomakic.customers.api.v1;
 
 import javax.annotation.security.DeclareRoles;
 import javax.ws.rs.ApplicationPath;
