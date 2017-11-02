@@ -1,0 +1,12 @@
+sudo: true
+dist: trusty
+
+jobs:
+  include:
+    - stage: build docker image
+      script:
+       - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+       - docker build -t totextservice .
+       - docker images
+       - docker tag totextservice $DOCKER_USERNAME/totextservice
+       - docker push $DOCKER_USERNAME/totextservice
