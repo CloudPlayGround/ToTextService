@@ -1,14 +1,22 @@
-sudo: true
-dist: trusty
+sudo: required
+
+services:
+  - docker
 
 language: java
+dist: trusty
 
-jobs:
-  include:
-    - stage: build docker image
-      script:
-       - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-       - docker build -t totextservice .
-       - docker images
-       - docker tag totextservice $DOCKER_USERNAME/totextservice
-       - docker push $DOCKER_USERNAME/totextservice
+jdk:
+- openjdk8
+
+cache:
+  directories:
+  - $HOME/.m2
+
+script:
+  - mvn clean package -U
+  - docker build -t $DOCKER_USERNAME/totextservice .
+
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push $DOCKER_USERNAME/totextservice
